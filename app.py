@@ -682,6 +682,30 @@ def model_check_card():
     )
 
 
+def showcase_note():
+    """Banner making clear this is a showcase on demonstration data, not a real client project."""
+    link = html.A(
+        "Discuss a similar project \u2192",
+        href=(PORTFOLIO_URL.rstrip("/") + "/#contact") if PORTFOLIO_URL else "#",
+        target="_blank",
+        style={"marginLeft": "10px", "fontWeight": 600, "color": "#b0432d", "whiteSpace": "nowrap"},
+    )
+    return html.Div(
+        id="showcase-note",
+        children=[
+            html.Strong("Showcase project. "),
+            "Built to show what is possible, using demonstration data. This is not a real client project. "
+            "The same approach works on your own data. ",
+            link if PORTFOLIO_URL else "",
+        ],
+        style={
+            "background": "#fff7ed", "color": "#7a4a12", "borderBottom": "1px solid #f3d9b8",
+            "padding": "10px 24px", "fontSize": "14px", "lineHeight": "1.5", "textAlign": "center",
+            "clear": "both",
+        },
+    )
+
+
 app.layout = html.Div(
     id="app-container",
     children=[
@@ -706,6 +730,7 @@ app.layout = html.Div(
                 ),
             ],
         ),
+        showcase_note(),
         # Left column
         html.Div(
             id="left-column",
