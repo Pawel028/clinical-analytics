@@ -1,0 +1,6 @@
+.venv
+venv
+__pycache__
+data/clinical_analytics.csv
+img
+scripts

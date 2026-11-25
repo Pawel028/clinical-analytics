@@ -1,0 +1,3 @@
+# only needed to regenerate data/model_check.json
+-r requirements.txt
+scikit-learn==1.9.1

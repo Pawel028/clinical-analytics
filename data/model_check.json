@@ -1,0 +1,9 @@
+{
+  "train_rows": 61399,
+  "test_rows": 20268,
+  "mae_model": 35.98,
+  "mae_baseline": 35.98,
+  "r2_test": -0.0006,
+  "corr_wait_vs_care_score": -0.39,
+  "negative_wait_rows": 2
+}
